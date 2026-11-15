@@ -1,12 +1,14 @@
 """Make voice.mp3 + words.json (word timings) for every voices/<name>/script.txt that has no voice yet.
 Runs on GitHub Actions (Microsoft Edge neural voices are not reachable from every sandbox)."""
-import asyncio, json, pathlib, sys
+import asyncio, json, pathlib, re, sys
 import edge_tts
 
 VOICE = "uz-UZ-SardorNeural"
 
 async def make(folder: pathlib.Path):
     text = (folder / "script.txt").read_text(encoding="utf-8").strip()
+    # Sardor reads o'/g' correctly only with the Uzbek okina (U+02BB); a plain apostrophe gives "g" and "a".
+    text = re.sub(r"([oOgG])['\u2019\u2018\u02bc`]", "\\1\u02bb", text)
     cfg = folder / "voice.json"
     opts = json.loads(cfg.read_text()) if cfg.exists() else {}
     com = edge_tts.Communicate(text, VOICE, rate=opts.get("rate", "+0%"), boundary="WordBoundary")
