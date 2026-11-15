@@ -1,0 +1,9 @@
+{
+  "voice": "petrock",
+  "script": "script.txt",
+  "audio": "voice.mp3",
+  "model": "small",
+  "language": "uz",
+  "status": "error",
+  "error": "TypeError: open() got an unexpected keyword argument 'metadata_errors'"
+}
