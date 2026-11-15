@@ -1,0 +1,99 @@
+{
+  "status": "review",
+  "expected_word_count": 18,
+  "transcribed_word_count": 20,
+  "substitutions": 14,
+  "deletions": 0,
+  "insertions": 2,
+  "error_count": 16,
+  "word_error_rate": 0.8889,
+  "transcript": "Uning vayase adi edi. Tiv ot mas leshti. Bu mavlubiyet emas. Ghala be taqde, baqde vaqshlaqde. Toghre yol uzak bulad.",
+  "differences": [
+    {
+      "type": "different",
+      "expected": "g'oyasi",
+      "heard": "vayase"
+    },
+    {
+      "type": "different",
+      "expected": "oddiy",
+      "heard": "adi"
+    },
+    {
+      "type": "different",
+      "expected": "Tig",
+      "heard": "Tiv"
+    },
+    {
+      "type": "different",
+      "expected": "o'tmaslashdi",
+      "heard": "ot"
+    },
+    {
+      "type": "extra",
+      "expected": "",
+      "heard": "mas"
+    },
+    {
+      "type": "extra",
+      "expected": "",
+      "heard": "leshti"
+    },
+    {
+      "type": "different",
+      "expected": "mag'lubiyat",
+      "heard": "mavlubiyet"
+    },
+    {
+      "type": "different",
+      "expected": "G'alaba",
+      "heard": "Ghala"
+    },
+    {
+      "type": "different",
+      "expected": "tog'da",
+      "heard": "be"
+    },
+    {
+      "type": "different",
+      "expected": "bog'da",
+      "heard": "taqde"
+    },
+    {
+      "type": "different",
+      "expected": "va",
+      "heard": "baqde"
+    },
+    {
+      "type": "different",
+      "expected": "qishloqda",
+      "heard": "vaqshlaqde"
+    },
+    {
+      "type": "different",
+      "expected": "To'g'ri",
+      "heard": "Toghre"
+    },
+    {
+      "type": "different",
+      "expected": "yo'l",
+      "heard": "yol"
+    },
+    {
+      "type": "different",
+      "expected": "uzoq",
+      "heard": "uzak"
+    },
+    {
+      "type": "different",
+      "expected": "bo'ladi",
+      "heard": "bulad"
+    }
+  ],
+  "voice": "test_b",
+  "script": "script.txt",
+  "audio": "voice.mp3",
+  "model": "small",
+  "language": "uz",
+  "note": "Differences are review flags; Whisper may also misrecognize speech."
+}

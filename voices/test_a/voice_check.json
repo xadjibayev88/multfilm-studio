@@ -1,0 +1,109 @@
+{
+  "status": "review",
+  "expected_word_count": 18,
+  "transcribed_word_count": 20,
+  "substitutions": 14,
+  "deletions": 1,
+  "insertions": 3,
+  "error_count": 18,
+  "word_error_rate": 1.0,
+  "transcript": "Un im gaia se adi edi. Tig at mesleshti. Bu maglubiet emes. Gelabetagde, bagde wa kshlaqde. Tagri yal uzak balad.",
+  "differences": [
+    {
+      "type": "different",
+      "expected": "Uning",
+      "heard": "Un"
+    },
+    {
+      "type": "different",
+      "expected": "g'oyasi",
+      "heard": "im"
+    },
+    {
+      "type": "different",
+      "expected": "oddiy",
+      "heard": "gaia"
+    },
+    {
+      "type": "extra",
+      "expected": "",
+      "heard": "se"
+    },
+    {
+      "type": "extra",
+      "expected": "",
+      "heard": "adi"
+    },
+    {
+      "type": "different",
+      "expected": "o'tmaslashdi",
+      "heard": "at"
+    },
+    {
+      "type": "extra",
+      "expected": "",
+      "heard": "mesleshti"
+    },
+    {
+      "type": "different",
+      "expected": "mag'lubiyat",
+      "heard": "maglubiet"
+    },
+    {
+      "type": "different",
+      "expected": "emas",
+      "heard": "emes"
+    },
+    {
+      "type": "different",
+      "expected": "G'alaba",
+      "heard": "Gelabetagde"
+    },
+    {
+      "type": "different",
+      "expected": "tog'da",
+      "heard": "bagde"
+    },
+    {
+      "type": "different",
+      "expected": "bog'da",
+      "heard": "wa"
+    },
+    {
+      "type": "different",
+      "expected": "va",
+      "heard": "kshlaqde"
+    },
+    {
+      "type": "different",
+      "expected": "qishloqda",
+      "heard": "Tagri"
+    },
+    {
+      "type": "different",
+      "expected": "To'g'ri",
+      "heard": "yal"
+    },
+    {
+      "type": "different",
+      "expected": "yo'l",
+      "heard": "uzak"
+    },
+    {
+      "type": "different",
+      "expected": "uzoq",
+      "heard": "balad"
+    },
+    {
+      "type": "missing",
+      "expected": "bo'ladi",
+      "heard": ""
+    }
+  ],
+  "voice": "test_a",
+  "script": "script.txt",
+  "audio": "voice.mp3",
+  "model": "small",
+  "language": "uz",
+  "note": "Differences are review flags; Whisper may also misrecognize speech."
+}
