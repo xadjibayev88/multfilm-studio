@@ -1,9 +1,419 @@
 {
+  "status": "review",
+  "expected_word_count": 90,
+  "transcribed_word_count": 88,
+  "substitutions": 74,
+  "deletions": 4,
+  "insertions": 2,
+  "error_count": 80,
+  "word_error_rate": 0.8889,
+  "transcript": "Bir adam adi taşhlarna satyp milyane ebaldi. Khendi eqilip. Bir min taqkiz 175-ci yil. Geri dal degen Ameri kelek dakanlarge adi taşhna alip chti. Ha, adi taşh. O unge Petroq, yanyi ui haywana taşh dep nan berdi. Har bir taşh hava teşkili kutige salendi. Ichide ise parvarish qallanmasi baredi. Narxı tahminan tort dolla. Adamlar kulişti wa satyp alişti. Bir nece a ichide tahminan ber yarem milyane taşh satyldi. Dal milyane ebaldi. Taşhning aze adi ed. Adamlar hazelnı wa khkha yanyi satyp aldi. Sizn mehne satgen balardingis. Izaxte yazing.",
+  "differences": [
+    {
+      "type": "different",
+      "expected": "odam",
+      "heard": "adam"
+    },
+    {
+      "type": "different",
+      "expected": "oddiy",
+      "heard": "adi"
+    },
+    {
+      "type": "different",
+      "expected": "toshlarni",
+      "heard": "taşhlarna"
+    },
+    {
+      "type": "different",
+      "expected": "sotib",
+      "heard": "satyp"
+    },
+    {
+      "type": "different",
+      "expected": "millioner",
+      "heard": "milyane"
+    },
+    {
+      "type": "different",
+      "expected": "bo'ldi",
+      "heard": "ebaldi"
+    },
+    {
+      "type": "different",
+      "expected": "Qanday",
+      "heard": "Khendi"
+    },
+    {
+      "type": "different",
+      "expected": "qilib",
+      "heard": "eqilip"
+    },
+    {
+      "type": "different",
+      "expected": "ming",
+      "heard": "min"
+    },
+    {
+      "type": "different",
+      "expected": "to'qqiz",
+      "heard": "taqkiz"
+    },
+    {
+      "type": "different",
+      "expected": "yuz",
+      "heard": "175-ci"
+    },
+    {
+      "type": "missing",
+      "expected": "yetmish",
+      "heard": ""
+    },
+    {
+      "type": "missing",
+      "expected": "beshinchi",
+      "heard": ""
+    },
+    {
+      "type": "different",
+      "expected": "degan",
+      "heard": "degen"
+    },
+    {
+      "type": "different",
+      "expected": "amerikalik",
+      "heard": "Ameri"
+    },
+    {
+      "type": "different",
+      "expected": "do'konlarga",
+      "heard": "kelek"
+    },
+    {
+      "type": "different",
+      "expected": "oddiy",
+      "heard": "dakanlarge"
+    },
+    {
+      "type": "different",
+      "expected": "toshni",
+      "heard": "adi"
+    },
+    {
+      "type": "different",
+      "expected": "olib",
+      "heard": "taşhna"
+    },
+    {
+      "type": "different",
+      "expected": "chiqdi",
+      "heard": "alip"
+    },
+    {
+      "type": "extra",
+      "expected": "",
+      "heard": "chti"
+    },
+    {
+      "type": "different",
+      "expected": "oddiy",
+      "heard": "adi"
+    },
+    {
+      "type": "different",
+      "expected": "tosh",
+      "heard": "taşh"
+    },
+    {
+      "type": "different",
+      "expected": "U",
+      "heard": "O"
+    },
+    {
+      "type": "different",
+      "expected": "unga",
+      "heard": "unge"
+    },
+    {
+      "type": "different",
+      "expected": "Pet",
+      "heard": "Petroq"
+    },
+    {
+      "type": "different",
+      "expected": "Rok",
+      "heard": "yanyi"
+    },
+    {
+      "type": "different",
+      "expected": "ya'ni",
+      "heard": "ui"
+    },
+    {
+      "type": "different",
+      "expected": "uy",
+      "heard": "haywana"
+    },
+    {
+      "type": "different",
+      "expected": "hayvoni",
+      "heard": "taşh"
+    },
+    {
+      "type": "different",
+      "expected": "tosh",
+      "heard": "dep"
+    },
+    {
+      "type": "different",
+      "expected": "deb",
+      "heard": "nan"
+    },
+    {
+      "type": "missing",
+      "expected": "nom",
+      "heard": ""
+    },
+    {
+      "type": "different",
+      "expected": "tosh",
+      "heard": "taşh"
+    },
+    {
+      "type": "different",
+      "expected": "havo",
+      "heard": "hava"
+    },
+    {
+      "type": "different",
+      "expected": "teshikli",
+      "heard": "teşkili"
+    },
+    {
+      "type": "different",
+      "expected": "qutiga",
+      "heard": "kutige"
+    },
+    {
+      "type": "different",
+      "expected": "solindi",
+      "heard": "salendi"
+    },
+    {
+      "type": "different",
+      "expected": "Ichida",
+      "heard": "Ichide"
+    },
+    {
+      "type": "different",
+      "expected": "esa",
+      "heard": "ise"
+    },
+    {
+      "type": "different",
+      "expected": "qo'llanmasi",
+      "heard": "qallanmasi"
+    },
+    {
+      "type": "different",
+      "expected": "bor",
+      "heard": "baredi"
+    },
+    {
+      "type": "different",
+      "expected": "edi",
+      "heard": "Narxı"
+    },
+    {
+      "type": "different",
+      "expected": "Narxi",
+      "heard": "tahminan"
+    },
+    {
+      "type": "different",
+      "expected": "taxminan",
+      "heard": "tort"
+    },
+    {
+      "type": "different",
+      "expected": "to'rt",
+      "heard": "dolla"
+    },
+    {
+      "type": "different",
+      "expected": "dollar",
+      "heard": "Adamlar"
+    },
+    {
+      "type": "different",
+      "expected": "Odamlar",
+      "heard": "kulişti"
+    },
+    {
+      "type": "different",
+      "expected": "kulishdi",
+      "heard": "wa"
+    },
+    {
+      "type": "different",
+      "expected": "va",
+      "heard": "satyp"
+    },
+    {
+      "type": "different",
+      "expected": "sotib",
+      "heard": "alişti"
+    },
+    {
+      "type": "missing",
+      "expected": "olishdi",
+      "heard": ""
+    },
+    {
+      "type": "different",
+      "expected": "necha",
+      "heard": "nece"
+    },
+    {
+      "type": "different",
+      "expected": "oy",
+      "heard": "a"
+    },
+    {
+      "type": "different",
+      "expected": "ichida",
+      "heard": "ichide"
+    },
+    {
+      "type": "different",
+      "expected": "taxminan",
+      "heard": "tahminan"
+    },
+    {
+      "type": "different",
+      "expected": "bir",
+      "heard": "ber"
+    },
+    {
+      "type": "different",
+      "expected": "yarim",
+      "heard": "yarem"
+    },
+    {
+      "type": "different",
+      "expected": "million",
+      "heard": "milyane"
+    },
+    {
+      "type": "different",
+      "expected": "tosh",
+      "heard": "taşh"
+    },
+    {
+      "type": "different",
+      "expected": "sotildi",
+      "heard": "satyldi"
+    },
+    {
+      "type": "different",
+      "expected": "millioner",
+      "heard": "milyane"
+    },
+    {
+      "type": "different",
+      "expected": "bo'ldi",
+      "heard": "ebaldi"
+    },
+    {
+      "type": "different",
+      "expected": "Toshning",
+      "heard": "Taşhning"
+    },
+    {
+      "type": "different",
+      "expected": "o'zi",
+      "heard": "aze"
+    },
+    {
+      "type": "different",
+      "expected": "oddiy",
+      "heard": "adi"
+    },
+    {
+      "type": "different",
+      "expected": "edi",
+      "heard": "ed"
+    },
+    {
+      "type": "different",
+      "expected": "Odamlar",
+      "heard": "Adamlar"
+    },
+    {
+      "type": "different",
+      "expected": "hazilni",
+      "heard": "hazelnı"
+    },
+    {
+      "type": "different",
+      "expected": "va",
+      "heard": "wa"
+    },
+    {
+      "type": "different",
+      "expected": "hikoyani",
+      "heard": "khkha"
+    },
+    {
+      "type": "different",
+      "expected": "sotib",
+      "heard": "yanyi"
+    },
+    {
+      "type": "different",
+      "expected": "oldi",
+      "heard": "satyp"
+    },
+    {
+      "type": "different",
+      "expected": "Siz",
+      "heard": "aldi"
+    },
+    {
+      "type": "different",
+      "expected": "nimani",
+      "heard": "Sizn"
+    },
+    {
+      "type": "different",
+      "expected": "sotgan",
+      "heard": "mehne"
+    },
+    {
+      "type": "different",
+      "expected": "bo'lardingiz",
+      "heard": "satgen"
+    },
+    {
+      "type": "different",
+      "expected": "Izohda",
+      "heard": "balardingis"
+    },
+    {
+      "type": "different",
+      "expected": "yozing",
+      "heard": "Izaxte"
+    },
+    {
+      "type": "extra",
+      "expected": "",
+      "heard": "yazing"
+    }
+  ],
   "voice": "petrock",
   "script": "script.txt",
   "audio": "voice.mp3",
   "model": "small",
   "language": "uz",
-  "status": "error",
-  "error": "TypeError: open() got an unexpected keyword argument 'metadata_errors'"
+  "note": "Differences are review flags; Whisper may also misrecognize speech."
 }
