@@ -25,7 +25,10 @@ async def main():
     for f in sorted(root.glob("*/script.txt")):
         d = f.parent
         if not (d / "voice.mp3").exists() or (d / "voice.mp3").stat().st_mtime < f.stat().st_mtime:
-            await make(d)
+            try:
+                await make(d)
+            except Exception as e:  # one bad script must not block the others
+                print("FAILED", d.name, type(e).__name__, e)
 
 if __name__ == "__main__":
     asyncio.run(main())
