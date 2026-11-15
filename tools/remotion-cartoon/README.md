@@ -3,6 +3,8 @@
 `cartoon-3d-short` skilli asosida (github.com/mromidev/claude-animated-shorts, MIT). Birinchi video: **Pet Rock** (apex_wealths).
 
 - Ovoz: `voices/<nom>/script.txt` ni push qiling → GitHub Actions (`.github/workflows/voice.yml`) `voice.mp3` va `words.json` (so'z vaqtlari) yaratadi.
+- Whisper QA: shu Action mahalliy CPU’da `faster-whisper` (`small`, o‘zbek tili) bilan audioni transkripsiya qilib, skript bilan solishtiradi va `voices/<nom>/voice_check.json` yozadi. API kaliti kerak emas; model yuklab olinib Actions cache’da saqlanadi.
+- Hisobotdagi tushib qolgan yoki boshqacha tanilgan so‘zlar faqat tekshiruv belgisi — Whisper o‘zi ham xato tanishi mumkin. Farq yoki QA xatosi ovoz yaratishni to‘xtatmaydi.
 - Sahna: `src/petrock/` (story.ts — kadrlar va vaqt, world.ts — dunyo, cards.ts — personajlar, outline.ts — qora konturlar).
 - Musiqa: `python3 audio/petrock_music.py src/petrock/words.json out/music.wav` (o'zimiz sintez qilgan, mualliflik muammosi yo'q).
 - Render (GPU'siz ham ishlaydi):

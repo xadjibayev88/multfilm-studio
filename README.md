@@ -10,13 +10,13 @@ Qisqa vertikal multfilm videolar yasash uchun skillar, kod va avtomatlar. Hammas
 | `.claude/skills/cartoon-reel` | **Tekis 2D multfilm** reels (30 s): personajlar, olomon, raqam hisoblagich, 2–3 so'zli yozuvlar. |
 | `tools/remotion-cartoon` | Ishlaydigan Remotion loyihasi. Birinchi video: **Pet Rock** (apex_wealths, 2026-11-14). |
 | `tools/cartoon-reel` | 2D reels yasovchi Python kodi (Pillow + ffmpeg). |
-| `tools/voice` + `.github/workflows/voice.yml` | O'zbekcha ovoz (Microsoft Edge, `uz-UZ-SardorNeural`) va so'zlar vaqti (`words.json`). |
-| `voices/<nom>/script.txt` | Ovoz matni. Push qilinsa, GitHub o'zi `voice.mp3` va `words.json` yaratadi. |
+| `tools/voice` + `.github/workflows/voice.yml` | O'zbekcha ovoz (Microsoft Edge, `uz-UZ-SardorNeural`), so'z vaqti (`words.json`) va audio-matn Whisper QA tekshiruvi. |
+| `voices/<nom>/script.txt` | Ovoz matni. Push qilinsa, GitHub `voice.mp3`, `words.json` va `voice_check.json` yaratadi. |
 
 ## Yangi 3D multfilm video — qadamlar
 
 1. **Hikoya**: bitta tekshirilgan fakt (2024-yildan oldingi), raqamlar so'z bilan yoziladi. Ochiq savol bilan boshlash yaxshi ishlaydi.
-2. **Ovoz**: `voices/<nom>/script.txt` yozing va push qiling → Actions "Ovoz yaratish" ishlaydi → `voice.mp3` + `words.json` repoga qaytadi.
+2. **Ovoz**: `voices/<nom>/script.txt` fayliga matn yozing va push qiling → Actions “Ovoz yaratish” `voice.mp3` va `words.json` yaratadi → CPU’da ishlaydigan Whisper audio tanigan so‘zlarni skript bilan solishtirib, `voice_check.json` hisobotini chiqaradi. Qo‘lda tekshirish uchun `pip install faster-whisper==1.1.1` dan so‘ng `python tools/voice/check_voice.py voices` buyrug‘ini bajaring.
 3. **Sahna**: `tools/remotion-cartoon/src/petrock` ni `src/<nom>` ga nusxalang. `story.ts` da kadrlarni (`SHOTS`) so'z raqamlariga bog'lang (`W(i)` — i-so'z boshlanadigan kadr). `world.ts` da joy va buyumlarni, `cards.ts` da personajlarni o'zgartiring. `Root.tsx` ga yangi kompozitsiya qo'shing.
 4. **Musiqa**: `python3 audio/petrock_music.py src/<nom>/words.json out/music.wav` (o'zimiz sintez qilgan, mualliflik muammosi yo'q).
 5. **Render** (GPU shart emas):
@@ -31,5 +31,6 @@ Qisqa vertikal multfilm videolar yasash uchun skillar, kod va avtomatlar. Hammas
 ## Muhim eslatmalar
 
 - Dasturiy grafikada (GPU'siz) post-effektlar ishlamaydi, shuning uchun qora konturlar `outline.ts` dagi usul bilan chiziladi.
+- Whisper so'zni tushirib qoldirishi yoki boshqacha tanishi mumkin; shu sababli hisobotdagi farq TTS xatosi tasdig'i emas, faqat tekshirish uchun belgi. Farqlarni audioni tinglab tekshiring. Pulli Whisper API ishlatilmaydi; GitHub Actions modeli yuklab olinib keshlanishi workflow vaqtini uzaytiradi.
 - Remotion jismoniy shaxslar va 3 kishigacha bo'lgan kompaniyalar uchun bepul.
 - Videoda faqat tekshirilgan faktlar; boshqa kanallarning ssenariysi, personaji yoki kadri ishlatilmaydi.
