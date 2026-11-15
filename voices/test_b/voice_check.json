@@ -1,13 +1,13 @@
 {
   "status": "review",
   "expected_word_count": 18,
-  "transcribed_word_count": 20,
+  "transcribed_word_count": 18,
   "substitutions": 14,
-  "deletions": 0,
-  "insertions": 2,
+  "deletions": 1,
+  "insertions": 1,
   "error_count": 16,
   "word_error_rate": 0.8889,
-  "transcript": "Uning vayase adi edi. Tiv ot mas leshti. Bu mavlubiyet emas. Ghala be taqde, baqde vaqshlaqde. Toghre yol uzak bulad.",
+  "transcript": "Uning vayase adi edi. Tiv otmas leshti. Bu mavlubyet imas. Ralebe taqde, baqde vaqshlaqde. Toqre yol uzaq bulad.",
   "differences": [
     {
       "type": "different",
@@ -27,12 +27,7 @@
     {
       "type": "different",
       "expected": "o'tmaslashdi",
-      "heard": "ot"
-    },
-    {
-      "type": "extra",
-      "expected": "",
-      "heard": "mas"
+      "heard": "otmas"
     },
     {
       "type": "extra",
@@ -42,52 +37,57 @@
     {
       "type": "different",
       "expected": "mag'lubiyat",
-      "heard": "mavlubiyet"
+      "heard": "mavlubyet"
+    },
+    {
+      "type": "different",
+      "expected": "emas",
+      "heard": "imas"
     },
     {
       "type": "different",
       "expected": "G'alaba",
-      "heard": "Ghala"
+      "heard": "Ralebe"
     },
     {
       "type": "different",
       "expected": "tog'da",
-      "heard": "be"
-    },
-    {
-      "type": "different",
-      "expected": "bog'da",
       "heard": "taqde"
     },
     {
       "type": "different",
-      "expected": "va",
+      "expected": "bog'da",
       "heard": "baqde"
     },
     {
       "type": "different",
-      "expected": "qishloqda",
+      "expected": "va",
       "heard": "vaqshlaqde"
     },
     {
       "type": "different",
-      "expected": "To'g'ri",
-      "heard": "Toghre"
+      "expected": "qishloqda",
+      "heard": "Toqre"
     },
     {
       "type": "different",
-      "expected": "yo'l",
+      "expected": "To'g'ri",
       "heard": "yol"
     },
     {
       "type": "different",
-      "expected": "uzoq",
-      "heard": "uzak"
+      "expected": "yo'l",
+      "heard": "uzaq"
     },
     {
       "type": "different",
-      "expected": "bo'ladi",
+      "expected": "uzoq",
       "heard": "bulad"
+    },
+    {
+      "type": "missing",
+      "expected": "bo'ladi",
+      "heard": ""
     }
   ],
   "voice": "test_b",

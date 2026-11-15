@@ -1,13 +1,13 @@
 {
   "status": "review",
   "expected_word_count": 104,
-  "transcribed_word_count": 106,
-  "substitutions": 80,
+  "transcribed_word_count": 105,
+  "substitutions": 78,
   "deletions": 0,
-  "insertions": 2,
-  "error_count": 82,
-  "word_error_rate": 0.7885,
-  "transcript": "Bu kampanya brenchi ile atigi ellik bikte ustara satdhe. Keingi ile esi taqsan mindan artdhe. Nima azgerdi. Tasawur kling, bir minn taqkiz yüz üçunchi ile. Kin jillet yengi kampanya açdhe. Unin kayası addi edi, ustaranin destas qaladi, tigi esi almeshadi. Tik atmas laşdhe me. Taşlaysiz ve yengisini kayasiz. Lekin brenchi ile atigi ellik bikte ustara ve bir yuz altmeş sakkiste tigi satdhe. Deyarli heç narsa. Bir iil atdhe. Bir minn taqkiz yüz tartenchi ilde satu taqsan mindan artdhek ustara ve bir yuz yigirme uç mindan artdhek tigi ilde. Sekin başlaneş hale maglubiyet emes. Bazarge bazan bir iil kirek baladhe. Siz neçenchi urinişte taslim balgansiz. Izaxte yazin.",
+  "insertions": 1,
+  "error_count": 79,
+  "word_error_rate": 0.7596,
+  "transcript": "Bu kampanya brenchi ili atigi ellik bikta ustara satdhe. Keyingi ili esi taqsan mindan artdhe. Nima azgerdi. Tasavur kling, bir minn taqkiz yüz üçunchi il. Kin jillet yengi kampanya açdhe. Unin kayası addi edi, ustaranin destas qaladi, tigi esi almeshadi. Tik atmas laşdhe me. Taşlaysiz vayengisini kayasiz. Lekin brenchi ili atigi ellik bikta ustara wa bir yuz altmeş sakkiste tigi satdhe. Deyarli heç nersi. Bir yil atdhe. Bir minn taqkiz yüz tartenchi ilde satu taqsan mindan artdhek ustara wa bir yuz yigirme uç mindan artdhek tigi itdhe. Sekin başlaneş hale maglubiyet emes. Bazarge bazan bir yil kirek baladi. Siz neçenchi urinişte taslim balgansiz. Izakhte yazin.",
   "differences": [
     {
       "type": "different",
@@ -22,12 +22,12 @@
     {
       "type": "different",
       "expected": "yili",
-      "heard": "ile"
+      "heard": "ili"
     },
     {
       "type": "different",
       "expected": "bitta",
-      "heard": "bikte"
+      "heard": "bikta"
     },
     {
       "type": "different",
@@ -36,13 +36,8 @@
     },
     {
       "type": "different",
-      "expected": "Keyingi",
-      "heard": "Keingi"
-    },
-    {
-      "type": "different",
       "expected": "yili",
-      "heard": "ile"
+      "heard": "ili"
     },
     {
       "type": "different",
@@ -72,7 +67,7 @@
     {
       "type": "different",
       "expected": "Tasavvur",
-      "heard": "Tasawur"
+      "heard": "Tasavur"
     },
     {
       "type": "different",
@@ -102,7 +97,7 @@
     {
       "type": "different",
       "expected": "yil",
-      "heard": "ile"
+      "heard": "il"
     },
     {
       "type": "different",
@@ -202,12 +197,7 @@
     {
       "type": "different",
       "expected": "qo'yasiz",
-      "heard": "ve"
-    },
-    {
-      "type": "extra",
-      "expected": "",
-      "heard": "yengisini"
+      "heard": "vayengisini"
     },
     {
       "type": "extra",
@@ -222,17 +212,17 @@
     {
       "type": "different",
       "expected": "yili",
-      "heard": "ile"
+      "heard": "ili"
     },
     {
       "type": "different",
       "expected": "bitta",
-      "heard": "bikte"
+      "heard": "bikta"
     },
     {
       "type": "different",
       "expected": "va",
-      "heard": "ve"
+      "heard": "wa"
     },
     {
       "type": "different",
@@ -261,8 +251,8 @@
     },
     {
       "type": "different",
-      "expected": "yil",
-      "heard": "iil"
+      "expected": "narsa",
+      "heard": "nersi"
     },
     {
       "type": "different",
@@ -317,7 +307,7 @@
     {
       "type": "different",
       "expected": "va",
-      "heard": "ve"
+      "heard": "wa"
     },
     {
       "type": "different",
@@ -347,7 +337,7 @@
     {
       "type": "different",
       "expected": "yetdi",
-      "heard": "ilde"
+      "heard": "itdhe"
     },
     {
       "type": "different",
@@ -381,18 +371,13 @@
     },
     {
       "type": "different",
-      "expected": "yil",
-      "heard": "iil"
-    },
-    {
-      "type": "different",
       "expected": "kerak",
       "heard": "kirek"
     },
     {
       "type": "different",
       "expected": "bo'ladi",
-      "heard": "baladhe"
+      "heard": "baladi"
     },
     {
       "type": "different",
@@ -412,7 +397,7 @@
     {
       "type": "different",
       "expected": "Izohda",
-      "heard": "Izaxte"
+      "heard": "Izakhte"
     },
     {
       "type": "different",

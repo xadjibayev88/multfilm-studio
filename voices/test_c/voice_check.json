@@ -2,31 +2,26 @@
   "status": "review",
   "expected_word_count": 18,
   "transcribed_word_count": 20,
-  "substitutions": 14,
-  "deletions": 1,
-  "insertions": 3,
-  "error_count": 18,
-  "word_error_rate": 1.0,
-  "transcript": "Un im gaia se adi edi. Tig at mesleshti. Bu maglubiet emes. Gelabetagde, bagde wa kshlaqde. Tagri yal uzak balad.",
+  "substitutions": 15,
+  "deletions": 0,
+  "insertions": 2,
+  "error_count": 17,
+  "word_error_rate": 0.9444,
+  "transcript": "Unin gaia se adi edi. Tig ad mesleşti. Bu maglubiyet emes. Galabe tagde, bagde wa kshlaxte. Tagri yal uzak balad.",
   "differences": [
     {
       "type": "different",
       "expected": "Uning",
-      "heard": "Un"
+      "heard": "Unin"
     },
     {
       "type": "different",
       "expected": "g'oyasi",
-      "heard": "im"
+      "heard": "gaia"
     },
     {
       "type": "different",
       "expected": "oddiy",
-      "heard": "gaia"
-    },
-    {
-      "type": "extra",
-      "expected": "",
       "heard": "se"
     },
     {
@@ -37,17 +32,17 @@
     {
       "type": "different",
       "expected": "o'tmaslashdi",
-      "heard": "at"
+      "heard": "ad"
     },
     {
       "type": "extra",
       "expected": "",
-      "heard": "mesleshti"
+      "heard": "mesleşti"
     },
     {
       "type": "different",
       "expected": "mag'lubiyat",
-      "heard": "maglubiet"
+      "heard": "maglubiyet"
     },
     {
       "type": "different",
@@ -57,47 +52,47 @@
     {
       "type": "different",
       "expected": "G'alaba",
-      "heard": "Gelabetagde"
+      "heard": "Galabe"
     },
     {
       "type": "different",
       "expected": "tog'da",
-      "heard": "bagde"
+      "heard": "tagde"
     },
     {
       "type": "different",
       "expected": "bog'da",
-      "heard": "wa"
+      "heard": "bagde"
     },
     {
       "type": "different",
       "expected": "va",
-      "heard": "kshlaqde"
+      "heard": "wa"
     },
     {
       "type": "different",
       "expected": "qishloqda",
-      "heard": "Tagri"
+      "heard": "kshlaxte"
     },
     {
       "type": "different",
       "expected": "To'g'ri",
-      "heard": "yal"
+      "heard": "Tagri"
     },
     {
       "type": "different",
       "expected": "yo'l",
-      "heard": "uzak"
+      "heard": "yal"
     },
     {
       "type": "different",
       "expected": "uzoq",
-      "heard": "balad"
+      "heard": "uzak"
     },
     {
-      "type": "missing",
+      "type": "different",
       "expected": "bo'ladi",
-      "heard": ""
+      "heard": "balad"
     }
   ],
   "voice": "test_c",
