@@ -158,7 +158,7 @@ def sky(ctx, day=((126, 164, 198), (214, 228, 238)), night=((14, 18, 40), (44, 5
 # ---------- captions (karaoke, yellow current word) ----------
 def tokens(words, script, replace):
     raw = script.split()
-    toks = [{"w": (raw[i] if len(raw) == len(words) else w["w"]), "t0": w["t0"], "t1": w["t1"]} for i, w in enumerate(words)]
+    toks = [{"w": (raw[i] if len(raw) == len(words) else w["w"]).replace("\u02bb", "'"), "t0": w["t0"], "t1": w["t1"]} for i, w in enumerate(words)]
     norm = lambda s: s.lower().strip(".,:;!?…\"'")
     out, i = [], 0
     while i < len(toks):
@@ -302,6 +302,10 @@ def frame(f):
     if hasattr(st, "overlay"): st.overlay(img, t, G)
     grp = next((g for g in G["groups"] if g[0]["t0"] - 0.08 <= t < g[-1]["t1"] + 0.25), None)
     caption(img, grp, t)
+    if hasattr(st, "shake"):
+        dx, dy = st.shake(t, G)
+        if dx or dy: img = ImageChops.offset(img, int(dx), int(dy))
+    if hasattr(st, "cover"): img = st.cover(img, t, G) or img
     return f, img.tobytes()
 
 
