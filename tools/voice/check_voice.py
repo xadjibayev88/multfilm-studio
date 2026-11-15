@@ -21,6 +21,24 @@ _APOSTROPHE_TRANSLATION = str.maketrans({char: "'" for char in "’‘ʻʼ′ʹ"
 Transcriber = Callable[[Path], tuple[str, str | None]]
 
 
+def _open_pyav_compat(open_func: Callable, *args, **kwargs):
+    """Retry without faster-whisper's metadata_errors kwarg if PyAV rejects it."""
+    try:
+        return open_func(*args, **kwargs)
+    except TypeError as exc:
+        message = str(exc)
+        unsupported_metadata_errors = (
+            "metadata_errors" in kwargs
+            and "unexpected keyword argument" in message
+            and "metadata_errors" in message
+        )
+        if not unsupported_metadata_errors:
+            raise
+        compatible_kwargs = dict(kwargs)
+        compatible_kwargs.pop("metadata_errors")
+        return open_func(*args, **compatible_kwargs)
+
+
 def _display_tokens(text: str) -> list[str]:
     normalized = unicodedata.normalize("NFKC", text.translate(_APOSTROPHE_TRANSLATION))
     return _WORD_RE.findall(normalized)
@@ -101,6 +119,7 @@ def compare_text(script: str, transcript: str) -> dict:
 
 def _make_transcriber(model_name: str, language: str, compute_type: str, cpu_threads: int) -> Transcriber:
     try:
+        import av
         from faster_whisper import WhisperModel
     except ImportError as exc:
         raise RuntimeError(
@@ -115,14 +134,23 @@ def _make_transcriber(model_name: str, language: str, compute_type: str, cpu_thr
     )
 
     def transcribe(audio_path: Path) -> tuple[str, str | None]:
-        segments, info = model.transcribe(
-            str(audio_path),
-            language=language,
-            beam_size=5,
-            vad_filter=True,
-        )
-        text = " ".join(segment.text.strip() for segment in segments).strip()
-        return text, getattr(info, "language", language)
+        original_open = av.open
+
+        def compatible_open(*args, **kwargs):
+            return _open_pyav_compat(original_open, *args, **kwargs)
+
+        av.open = compatible_open
+        try:
+            segments, info = model.transcribe(
+                str(audio_path),
+                language=language,
+                beam_size=5,
+                vad_filter=True,
+            )
+            text = " ".join(segment.text.strip() for segment in segments).strip()
+            return text, getattr(info, "language", language)
+        finally:
+            av.open = original_open
 
     return transcribe
 

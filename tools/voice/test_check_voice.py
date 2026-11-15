@@ -6,6 +6,7 @@ from unittest.mock import patch
 
 from check_voice import (
     _make_transcriber,
+    _open_pyav_compat,
     compare_text,
     format_summary,
     normalize_tokens,
@@ -20,6 +21,37 @@ class TranscriberImportTests(unittest.TestCase):
                 RuntimeError, "Unable to import faster-whisper"
             ):
                 _make_transcriber("small", "uz", "int8", 4)
+
+
+class PyAVOpenCompatibilityTests(unittest.TestCase):
+    def test_retries_without_metadata_errors_when_pyav_rejects_it(self):
+        calls = []
+
+        def fake_open(*args, **kwargs):
+            calls.append((args, dict(kwargs)))
+            if "metadata_errors" in kwargs:
+                raise TypeError("open() got an unexpected keyword argument 'metadata_errors'")
+            return "decoded-container"
+
+        result = _open_pyav_compat(
+            fake_open,
+            "audio.mp3",
+            mode="r",
+            metadata_errors="ignore",
+        )
+
+        self.assertEqual(result, "decoded-container")
+        self.assertEqual(len(calls), 2)
+        self.assertEqual(calls[0][1]["metadata_errors"], "ignore")
+        self.assertNotIn("metadata_errors", calls[1][1])
+        self.assertEqual(calls[1][1]["mode"], "r")
+
+    def test_does_not_retry_unrelated_type_errors(self):
+        def broken_open(*args, **kwargs):
+            raise TypeError("unrelated argument error")
+
+        with self.assertRaisesRegex(TypeError, "unrelated argument error"):
+            _open_pyav_compat(broken_open, "audio.mp3", metadata_errors="ignore")
 
 
 class NormalizeTokensTests(unittest.TestCase):
