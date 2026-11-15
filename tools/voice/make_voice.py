@@ -9,7 +9,7 @@ async def make(folder: pathlib.Path):
     text = (folder / "script.txt").read_text(encoding="utf-8").strip()
     cfg = folder / "voice.json"
     opts = json.loads(cfg.read_text()) if cfg.exists() else {}
-    com = edge_tts.Communicate(text, opts.get("voice", VOICE), rate=opts.get("rate", "+0%"), boundary="WordBoundary")
+    com = edge_tts.Communicate(text, VOICE, rate=opts.get("rate", "+0%"), boundary="WordBoundary")
     words, audio = [], bytearray()
     async for chunk in com.stream():
         if chunk["type"] == "audio":
@@ -27,4 +27,5 @@ async def main():
         if not (d / "voice.mp3").exists() or (d / "voice.mp3").stat().st_mtime < f.stat().st_mtime:
             await make(d)
 
-asyncio.run(main())
+if __name__ == "__main__":
+    asyncio.run(main())
