@@ -2,8 +2,24 @@ import json
 import tempfile
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
-from check_voice import compare_text, format_summary, normalize_tokens, run_checks
+from check_voice import (
+    _make_transcriber,
+    compare_text,
+    format_summary,
+    normalize_tokens,
+    run_checks,
+)
+
+
+class TranscriberImportTests(unittest.TestCase):
+    def test_missing_whisper_dependency_has_clear_error(self):
+        with patch.dict("sys.modules", {"faster_whisper": None}):
+            with self.assertRaisesRegex(
+                RuntimeError, "Unable to import faster-whisper"
+            ):
+                _make_transcriber("small", "uz", "int8", 4)
 
 
 class NormalizeTokensTests(unittest.TestCase):

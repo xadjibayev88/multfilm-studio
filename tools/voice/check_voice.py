@@ -104,7 +104,7 @@ def _make_transcriber(model_name: str, language: str, compute_type: str, cpu_thr
         from faster_whisper import WhisperModel
     except ImportError as exc:
         raise RuntimeError(
-            "Whisper dependency missing; install faster-whisper before running this check."
+            f"Unable to import faster-whisper ({exc}); install faster-whisper and its runtime dependencies before running this check."
         ) from exc
 
     model = WhisperModel(

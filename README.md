@@ -16,7 +16,7 @@ Qisqa vertikal multfilm videolar yasash uchun skillar, kod va avtomatlar. Hammas
 ## Yangi 3D multfilm video — qadamlar
 
 1. **Hikoya**: bitta tekshirilgan fakt (2024-yildan oldingi), raqamlar so'z bilan yoziladi. Ochiq savol bilan boshlash yaxshi ishlaydi.
-2. **Ovoz**: `voices/<nom>/script.txt` fayliga matn yozing va push qiling → Actions “Ovoz yaratish” `voice.mp3` va `words.json` yaratadi → CPU’da ishlaydigan Whisper audio tanigan so‘zlarni skript bilan solishtirib, `voice_check.json` hisobotini chiqaradi. Qo‘lda tekshirish uchun `pip install faster-whisper==1.1.1` dan so‘ng `python tools/voice/check_voice.py voices` buyrug‘ini bajaring.
+2. **Ovoz**: `voices/<nom>/script.txt` fayliga matn yozing va push qiling → Actions “Ovoz yaratish” `voice.mp3` va `words.json` yaratadi → CPU’da ishlaydigan Whisper audio tanigan so‘zlarni skript bilan solishtirib, `voice_check.json` hisobotini chiqaradi. Qo‘lda tekshirish uchun `pip install faster-whisper==1.1.1 requests==2.34.2` dan so‘ng `python tools/voice/check_voice.py voices` buyrug‘ini bajaring.
 3. **Sahna**: `tools/remotion-cartoon/src/petrock` ni `src/<nom>` ga nusxalang. `story.ts` da kadrlarni (`SHOTS`) so'z raqamlariga bog'lang (`W(i)` — i-so'z boshlanadigan kadr). `world.ts` da joy va buyumlarni, `cards.ts` da personajlarni o'zgartiring. `Root.tsx` ga yangi kompozitsiya qo'shing.
 4. **Musiqa**: `python3 audio/petrock_music.py src/<nom>/words.json out/music.wav` (o'zimiz sintez qilgan, mualliflik muammosi yo'q).
 5. **Render** (GPU shart emas):
